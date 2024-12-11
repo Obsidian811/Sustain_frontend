@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './Navbar/Navbar.tsx';
 import Sidebar from './Sidebar/sidebar.tsx';
-import ProfileButton from './ProfileButton.tsx';
+import ProfileButton from './ProfileButton/ProfileButton.tsx';
 import LandingPage from './LandingPage/LandingPage.tsx';
 import AboutUs from './AboutUs/AboutUs.tsx';
 import Login from './Login/Login.tsx';
