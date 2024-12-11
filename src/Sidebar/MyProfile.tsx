@@ -1,6 +1,7 @@
 import React from 'react';
 
-const MyProfile: React.FC = () => {
+const MyProfile: React.FC = () => 
+{
     return (
         <div>
             <h2>My Profile</h2>

@@ -14,6 +14,7 @@ import Catalogue from './Sidebar/Catalogue.tsx';
 import FindSeller from './Sidebar/FindSeller.tsx';
 import TrackOrders from './Sidebar/TrackOrders.tsx';
 import Chatroom from './Sidebar/Chatroom.tsx';
+import ProductPage from './ForCustomer/ProductPage.tsx'
 
 
 const App: React.FC = () => {
@@ -41,6 +42,7 @@ const App: React.FC = () => {
                         <Route path="/find-seller" element={<FindSeller />} />
                         <Route path="/track-orders" element={<TrackOrders />} />
                         <Route path="/chatroom" element={<Chatroom />} />
+                        <Route path="/product-page" element={<ProductPage />} />
                     </Routes>
                 </div>
             </div>

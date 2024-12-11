@@ -1,4 +1,5 @@
-import React, { useState } from 'react'; 
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const ForCustomer: React.FC = () => 
 {
@@ -31,13 +32,13 @@ const ForCustomer: React.FC = () =>
                 </div>
                 <div style={gridStyle}>
                     {filteredItems.map(item => (
-                        <div key={item.id} style={cardStyle}>
-                            <h3 style={cardTitleStyle}>{item.name}</h3>
-                            <p style={cardDescriptionStyle}>{item.description}</p>
-                            <p style={cardDetailStyle}>Rating: {item.rating} ⭐</p>
-                            <p style={cardDetailStyle}>Quantity: {item.quantity}</p>
-                            <p style={cardDetailStyle}>Price: {item.price}</p>
-                        </div>
+                        <Link to="/product-page" key={item.id} style={cardStyle}> {/* Wrap card in Link */}
+                        <h3 style={cardTitleStyle}>{item.name}</h3>
+                        <p style={cardDescriptionStyle}>{item.description}</p>
+                        <p style={cardDetailStyle}>Rating: {item.rating} ⭐</p>
+                        <p style={cardDetailStyle}>Quantity: {item.quantity}</p>
+                        <p style={cardDetailStyle}>Price: {item.price}</p>
+                        </Link>
                     ))}
                 </div>
             </section>
