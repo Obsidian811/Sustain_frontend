@@ -9,12 +9,13 @@ import AboutUs from './AboutUs/AboutUs.tsx';
 import Login from './Login/Login.tsx';
 import ForBusiness from './ForBusiness/ForBussiness.tsx';
 import ForCustomer from './ForCustomer/ForCustomer.tsx';
-import MyProfile from './Sidebar/MyProfile.tsx';
+// import MyProfile from './Sidebar/MyProfile.tsx';
 import Catalogue from './Sidebar/Catalogue.tsx';
 import FindSeller from './Sidebar/FindSeller.tsx';
 import TrackOrders from './Sidebar/TrackOrders.tsx';
 import Chatroom from './Sidebar/Chatroom.tsx';
-import ProductPage from './ForCustomer/ProductPage.tsx'
+import ProductPage from './ProductPages/SteelBottle.tsx'
+import BambooToothbrush from './ProductPages/BambooToothbrush.tsx';
 
 
 const App: React.FC = () => {
@@ -37,12 +38,13 @@ const App: React.FC = () => {
                         <Route path="/login" element={<Login />} />
                         <Route path="/for-business" element={<ForBusiness />} />
                         <Route path="/for-customer" element={<ForCustomer />} />
-                        <Route path="/my-profile" element={<MyProfile />} />
+                        {/* <Route path="/my-profile" element={<MyProfile />} /> */}
                         <Route path="/catalogue" element={<Catalogue />} />
                         <Route path="/find-seller" element={<FindSeller />} />
                         <Route path="/track-orders" element={<TrackOrders />} />
                         <Route path="/chatroom" element={<Chatroom />} />
                         <Route path="/product-page" element={<ProductPage />} />
+                        <Route path="/product-page" element={<BambooToothbrush />} />
                     </Routes>
                 </div>
             </div>

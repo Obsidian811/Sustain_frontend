@@ -32,7 +32,7 @@ const ForCustomer: React.FC = () =>
                 </div>
                 <div style={gridStyle}>
                     {filteredItems.map(item => (
-                        <Link to="/product-page" key={item.id} style={cardStyle}> {/* Wrap card in Link */}
+                        <Link to='/product-page' key={item.id} style={cardStyle}> {/* Wrap card in Link */}
                         <h3 style={cardTitleStyle}>{item.name}</h3>
                         <p style={cardDescriptionStyle}>{item.description}</p>
                         <p style={cardDetailStyle}>Rating: {item.rating} ⭐</p>
