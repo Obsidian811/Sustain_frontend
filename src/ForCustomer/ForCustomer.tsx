@@ -4,7 +4,8 @@ const ForCustomer: React.FC = () =>
 {
     const [searchTerm, setSearchTerm] = useState('');
 
-    const items = [
+    const items = 
+    [
         { id: 1, name: 'Organic Cotton Shirt', description: '100% organic cotton, breathable and sustainable.', rating: 4.5, quantity: 10, price: '$25' },
         { id: 2, name: 'Bamboo Toothbrush', description: 'Eco-friendly toothbrush made of bamboo.', rating: 4.7, quantity: 30, price: '$5' },
         { id: 3, name: 'Aluminium Battery Pack', description: 'Lightweight and recyclable battery pack.', rating: 4.2, quantity: 15, price: '$40' },
@@ -45,9 +46,11 @@ const ForCustomer: React.FC = () =>
 };
 
 const pageStyle: React.CSSProperties = {
+    backgroundImage: "url('./assets/green.jpg')",
+    backgroundSize: "cover",
     padding: '20px',
     fontFamily: 'Arial, sans-serif',
-    backgroundColor: '#f4f4f4',
+    // backgroundColor: '#f4f4f4',
     minHeight: '100vh',
     minWidth: '100vw'
 };

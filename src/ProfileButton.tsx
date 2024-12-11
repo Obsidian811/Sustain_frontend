@@ -15,7 +15,7 @@ const ProfileButton: React.FC<ProfileButtonProps> = ({ onClick }) => {
 
 const buttonStyle: React.CSSProperties = {
     position: 'fixed',
-    top: '10px',
+    // top: '10px',
     left: '10px',
     padding: '10px',
     backgroundColor: '#282c34',

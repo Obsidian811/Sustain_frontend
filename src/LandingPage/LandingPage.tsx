@@ -4,8 +4,8 @@ import styles from './LandingPage.module.css'
 const LandingPage: React.FC = () => {
     return (
         <div className={styles.style}>
-            <h1>SustainaLink</h1>
-            <p>Your journey starts here!</p>
+            <p className={styles.heading}>SustainaLink</p>
+            <p className={styles.para}>Your journey starts here!</p>
         </div>
     );
 };
