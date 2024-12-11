@@ -1,13 +1,14 @@
+
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './Navbar/Navbar.tsx';
 import Sidebar from './sidebar';
 import ProfileButton from './ProfileButton.tsx';
 import LandingPage from './LandingPage/LandingPage.tsx';
-import AboutUs from './Navbar/AboutUs.tsx';
-import Login from './Navbar/Login.tsx';
-import ForBusiness from './Navbar/ForBussiness.tsx';
-import ForCustomer from './Navbar/ForCustomer.tsx';
+import AboutUs from './AboutUs/AboutUs.tsx';
+import Login from './Login/Login.tsx';
+import ForBusiness from './ForBusiness/ForBussiness.tsx';
+import ForCustomer from './ForCustomer/ForCustomer.tsx';
 
 const App: React.FC = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
