@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import styles from './TrackOrders.module.css'
 
 interface TrackingData {
   tracking_id: number;
@@ -41,20 +42,20 @@ const TrackOrders: React.FC = () => {
   };
 
   return (
-    <div style={trackingPageStyle}>
-      <div style={headerStyle}>Order Tracking</div>
+    <div className={styles.trackingPage}>
+      <div className={styles.header}>Order Tracking</div>
       <input
         type="text"
         placeholder="Search by Order ID, Product Name, or Status..."
         value={searchTerm}
         onChange={handleSearch}
-        style={searchBarStyle}
+        className={styles.searchBar}
       />
 
-      <div style={trackingContainerStyle}>
+      <div className={styles.trackingContainer}>
         {filteredData.map((item) => (
-          <div key={item.tracking_id} style={trackingCardStyle}>
-            <h3 style={cardHeaderStyle}>Order ID: {item.order_id}</h3>
+          <div key={item.tracking_id} className={styles.trackingCard}>
+            <h3 className={styles.cardHeader}>Order ID: {item.order_id}</h3>
             <p><strong>Product:</strong> {item.product_name}</p>
             <p><strong>Status:</strong> {item.status}</p>
             <p><strong>Location:</strong> {item.location}</p>
@@ -66,12 +67,6 @@ const TrackOrders: React.FC = () => {
   );
 };
 
-const trackingPageStyle = { /* Same styling */ };
-const headerStyle = { /* Same styling */ };
-const searchBarStyle = { /* Same styling */ };
-const trackingContainerStyle = { /* Same styling */ };
-const trackingCardStyle = { /* Same styling */ };
-const cardHeaderStyle = { /* Same styling */ };
 
 export default TrackOrders;
 

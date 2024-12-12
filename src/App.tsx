@@ -12,7 +12,7 @@ import ForCustomer from './ForCustomer/ForCustomer.tsx';
 import MyProfile from './MyProfile/MyProfile.tsx';
 import Catalogue from './Sidebar/Catalogue.tsx';
 import FindSeller from './FindSeller/FindSeller.tsx';
-import TrackOrders from './Sidebar/TrackOrders.tsx';
+import TrackOrders from './TrackOrders/TrackOrders.tsx';
 import Chatroom from './Sidebar/Chatroom.tsx';
 import ProductPage from './ProductPages/SteelBottle.tsx'
 import BambooToothbrush from './ProductPages/BambooToothbrush.tsx';

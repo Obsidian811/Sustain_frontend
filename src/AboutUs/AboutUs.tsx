@@ -1,76 +1,74 @@
-import React from "react";
+import React from 'react';
 
-const AboutUs = () => {
-  return (
-    <div style={styles.container}>
-      {/* Header Section */}
-      <header style={styles.header}>
-        <h1 style={styles.title}>Welcome to SustainaLink</h1>
-        <p style={styles.subtitle}>
+const AboutUs = () => (
+  <div style={styles.container}>
+    {/* Header Section */}
+    <header style={styles.header}>
+      <h1 style={styles.title}>Welcome to SustainaLink</h1>
+      <p style={styles.subtitle}>
         Redefining Waste, Redesigning Futures
-        </p>
-      </header>
+      </p>
+    </header>
 
-      {/* About Section */}
-      <section style={styles.aboutSection}>
-        <h2 style={styles.sectionTitle}>Who We Are</h2>
-        <p style={styles.text}>
-          SustainaLink is more than just a platform; it’s a movement to bridge the gap between technology, businesses, and sustainable practices. Our mission is to empower organizations and individuals with innovative solutions that drive meaningful environmental and social impact.
-        </p>
-      </section>
+    {/* About Section */}
+    <section style={styles.aboutSection}>
+      <h2 style={styles.sectionTitle}>Who We Are</h2>
+      <p style={styles.text}>
+        SustainaLink is more than just a platform; it’s a movement to bridge the gap between technology, businesses, and sustainable practices. Our mission is to empower organizations and individuals with innovative solutions that drive meaningful environmental and social impact.
+      </p>
+    </section>
 
-      {/* Features Section */}
-      <section style={styles.featuresSection}>
-        <h2 style={styles.sectionTitle}>What Makes Us Stand Out?</h2>
-        <div style={styles.featuresGrid}>
-          <div style={styles.featureCard}>
-            <h3 style={styles.featureTitle}>🌍 Sustainability Focus</h3>
-            <p style={styles.text}>
-              Our solutions are built with a deep commitment to reducing carbon footprints , limit the waste generated in linear economy network and promoting eco-friendly practices.
-            </p>
-          </div>
-          <div style={styles.featureCard}>
-            <h3 style={styles.featureTitle}>🤝 Meaningful Partnerships</h3>
-            <p style={styles.text}>
-              We collaborate with businesses, NGOs, and governments to ensure a holistic approach to achieving Sustainable Development Goals (SDGs).
-            </p>
-          </div>
-          <div style={styles.featureCard}>
-            <h3 style={styles.featureTitle}>💡 Cutting-Edge Technology</h3>
-            <p style={styles.text}>
-              Leveraging cutting edge technologies through functionalities such as chatroom and tracking orders to deliver innovative solutions that drive sustainable transformation.
-            </p>
-          </div>
-          <div style={styles.featureCard}>
-            <h3 style={styles.featureTitle}>📈 Data-Driven Insights</h3>
-            <p style={styles.text}>
-              Our platform provides actionable insights, enabling stakeholders to make informed decisions for a greener future.
-            </p>
-          </div>
+    {/* Features Section */}
+    <section style={styles.featuresSection}>
+      <h2 style={styles.sectionTitle}>What Makes Us Stand Out?</h2>
+      <div style={styles.featuresGrid}>
+        <div style={styles.featureCard}>
+          <h3 style={styles.featureTitle}>🌍 Sustainability Focus</h3>
+          <p style={styles.text}>
+            Our solutions are built with a deep commitment to reducing carbon footprints, limiting the waste generated in a linear economy network, and promoting eco-friendly practices.
+          </p>
         </div>
-      </section>
+        <div style={styles.featureCard}>
+          <h3 style={styles.featureTitle}>🤝 Meaningful Partnerships</h3>
+          <p style={styles.text}>
+            We collaborate with businesses, NGOs, and governments to ensure a holistic approach to achieving Sustainable Development Goals (SDGs).
+          </p>
+        </div>
+        <div style={styles.featureCard}>
+          <h3 style={styles.featureTitle}>💡 Cutting-Edge Technology</h3>
+          <p style={styles.text}>
+            Leveraging cutting-edge technologies through functionalities such as chatrooms and tracking orders to deliver innovative solutions that drive sustainable transformation.
+          </p>
+        </div>
+        <div style={styles.featureCard}>
+          <h3 style={styles.featureTitle}>📈 Data-Driven Insights</h3>
+          <p style={styles.text}>
+            Our platform provides actionable insights, enabling stakeholders to make informed decisions for a greener future.
+          </p>
+        </div>
+      </div>
+    </section>
 
-      {/* Vision Section */}
-      <section style={styles.visionSection}>
-        <h2 style={styles.sectionTitle}>Our Vision</h2>
-        <p style={styles.text}>
-          At SustainaLink, we envision a world where businesses thrive while prioritizing people and the planet. We are driven by the belief that technology can be a powerful force for good, transforming industries and creating a more equitable and sustainable future.
-        </p>
-      </section>
+    {/* Vision Section */}
+    <section style={styles.visionSection}>
+      <h2 style={styles.sectionTitle}>Our Vision</h2>
+      <p style={styles.text}>
+        At SustainaLink, we envision a world where businesses thrive while prioritizing people and the planet. We are driven by the belief that technology can be a powerful force for good, transforming industries and creating a more equitable and sustainable future.
+      </p>
+    </section>
 
-      {/* Call to Action */}
-      <section style={styles.ctaSection}>
-        <h2 style={styles.sectionTitle}>Join Us in Making a Difference</h2>
-        <p style={styles.text}>
-          Be a part of the SustainaLink community and contribute to building a sustainable future. Together, we can create a lasting impact.
-        </p>
-        <button style={styles.ctaButton}>Learn More</button>
-      </section>
-    </div>
-  );
-};
+    {/* Call to Action */}
+    <section style={styles.ctaSection}>
+      <h2 style={styles.sectionTitle}>Join Us in Making a Difference</h2>
+      <p style={styles.text}>
+        Be a part of the SustainaLink community and contribute to building a sustainable future. Together, we can create a lasting impact.
+      </p>
+      <button style={styles.ctaButton}>Learn More</button>
+    </section>
+  </div>
+);
 
-const styles = {
+const styles: { [key: string]: React.CSSProperties } = {
   container: {
     fontFamily: "'Roboto', sans-serif",
     lineHeight: "1.6",
