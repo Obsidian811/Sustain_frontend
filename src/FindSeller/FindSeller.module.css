@@ -1,6 +1,7 @@
 .style {
     background-image: url('./assets/green.jpg');
     width: 100vw;
+    min-height: 100vh;
     height: auto;
     background-size: cover;
     background-position: center;
