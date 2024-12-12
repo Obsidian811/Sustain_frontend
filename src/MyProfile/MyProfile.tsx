@@ -1,6 +1,6 @@
 // Import React and required libraries
 import { useState, useEffect } from "react";
-import "./MyProfile.module.css"; // Add your custom styling here
+import styles from "./MyProfile.module.css"; // Add your custom styling here
 import { FaWallet } from "react-icons/fa";
 
 const MyProfile = () => {
@@ -51,14 +51,14 @@ const MyProfile = () => {
   };
 
   return (
-    <div className="dashboard">
+    <div className={styles.dashboard}>
       <h1>My Account</h1>
-      <div className="user-info">
-        <div className="profile-picture">
+      <div className={styles.userInfo}>
+        <div className={styles.profilePicture}>
           {user.profilePicture ? (
             <img src={user.profilePicture} alt="Profile" />
           ) : (
-            <div className="placeholder">Add Picture</div>
+            <div className={styles.placeholder}>Add Picture</div>
           )}
           <input
             type="file"
@@ -70,7 +70,7 @@ const MyProfile = () => {
         </div>
         <p><strong>Display Name:</strong> {user.displayName}</p>
         <p><strong>Email:</strong> {user.email}</p>
-        <div className="editable-fields">
+        <div className={styles.editableFields}>
           <p>
             <strong>Phone Number:</strong>
             <input
@@ -94,13 +94,13 @@ const MyProfile = () => {
         </div>
       </div>
 
-      <div className="wallet-section">
+      <div className={styles.walletSection}>
         <h2><FaWallet /> Wallet</h2>
         <p><strong>Total Eco Points:</strong> {wallet.totalPoints}</p>
         <p><strong>Points Earned:</strong> {wallet.pointsEarned}</p>
         <p><strong>Points Spent:</strong> {wallet.pointsSpent}</p>
         <button onClick={handleAddPoints}>Add 50 Eco Points</button>
-        {notification && <div className="notification">{notification}</div>}
+        {notification && <div className={styles.notification}>{notification}</div>}
       </div>
     </div>
   );
