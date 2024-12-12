@@ -1,6 +1,7 @@
 // HomePage.tsx
 import React from 'react';
 import styles from './ForBussiness.module.css';
+import { Link } from 'react-router-dom';
 
 const HomePage: React.FC = () => {
   return (
@@ -30,7 +31,7 @@ const HomePage: React.FC = () => {
               className={styles.listProductButton}
               onClick={() => alert('List your product!')}
             >
-              List Your Product
+              <Link to='/product-listing'>List Your Product</Link>
             </button>
           </div>
         ))}
