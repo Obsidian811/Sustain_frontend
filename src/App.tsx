@@ -10,7 +10,7 @@ import Login from './Login/Login.tsx';
 import ForBusiness from './ForBusiness/ForBussiness.tsx';
 import ForCustomer from './ForCustomer/ForCustomer.tsx';
 import MyProfile from './MyProfile/MyProfile.tsx';
-import Catalogue from './Sidebar/Catalogue.tsx';
+import Cart from './Sidebar/Cart.tsx';
 import FindSeller from './FindSeller/FindSeller.tsx';
 import TrackOrders from './TrackOrders/TrackOrders.tsx';
 import Chatroom from './Sidebar/Chatroom.tsx';
@@ -39,7 +39,7 @@ const App: React.FC = () => {
                         <Route path="/for-business" element={<ForBusiness />} />
                         <Route path="/for-customer" element={<ForCustomer />} />
                         <Route path="/my-profile" element={<MyProfile />} /> 
-                        <Route path="/catalogue" element={<Catalogue />} />
+                        <Route path="/cart" element={<Cart />} />
                         <Route path="/find-seller" element={<FindSeller />} />
                         <Route path="/track-orders" element={<TrackOrders />} />
                         <Route path="/chatroom" element={<Chatroom />} />

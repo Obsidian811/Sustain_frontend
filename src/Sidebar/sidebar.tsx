@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import styles from './Sidebar.module.css';
 
 interface SidebarProps {
     isOpen: boolean;
@@ -7,59 +8,21 @@ interface SidebarProps {
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen }) => {
     return (
-        <div style={{ ...sidebarStyle, display: isOpen ? 'block' : 'none' }}>
-            <div style={logoStyle}>
-                <img src="./assets/original-removedbg.png" alt="Logo" style={logoImageStyle} />
+        <div className={`${styles.sidebar} ${isOpen ? styles.open : ''}`}>
+            <div className={styles.logo}>
+                <img src="./assets/original-removedbg.png" alt="Logo" className={styles.logoImage} />
             </div>
-            <h3 style={head}>Menu</h3>
-            <ul style={listStyle}>
-                <li><Link to="/my-profile" style={linkStyle}>My Profile</Link></li>
-                <li><Link to="/catalogue" style={linkStyle}>Catalogue</Link></li>
-                <li><Link to="/find-seller" style={linkStyle}>Find Seller</Link></li>
-                <li><Link to="/track-orders" style={linkStyle}>Track Orders</Link></li>
-                <li><Link to="/chatroom" style={linkStyle}>Chat Room</Link></li>
-                <li><Link to="/logout" style={linkStyle}>Logout</Link></li>
+            <h3 className={styles.menuHeading}>Menu</h3>
+            <ul className={styles.menuList}>
+                <li><Link to="/my-profile" className={styles.menuLink}>My Profile</Link></li>
+                <li><Link to="/cart" className={styles.menuLink}>My Cart</Link></li>
+                <li><Link to="/find-seller" className={styles.menuLink}>Find Seller</Link></li>
+                <li><Link to="/track-orders" className={styles.menuLink}>Track Orders</Link></li>
+                <li><Link to="/chatroom" className={styles.menuLink}>Chat Room</Link></li>
+                <li><Link to="/logout" className={styles.menuLink}>Logout</Link></li>
             </ul>
         </div>
     );
-};
-
-const head: React.CSSProperties = {
-    color: 'black',
-};
-
-const sidebarStyle: React.CSSProperties = {
-    width: '200px',
-    backgroundColor: 'rgba(244, 244, 244, 0.8)', // Translucent background
-    padding: '20px',
-    position: 'fixed',
-    top: '0',
-    left: '0',
-    height: '100%',
-    transition: '0.3s',
-};
-
-const logoStyle: React.CSSProperties = {
-    textAlign: 'center',
-    // top: '40px',
-    marginBottom: '20px',
-};
-
-const logoImageStyle: React.CSSProperties = {
-    width: '100px', // Adjust the size as needed
-    height: 'auto',
-};
-
-const listStyle: React.CSSProperties = {
-    listStyleType: 'none',
-    padding: 0,
-};
-
-const linkStyle: React.CSSProperties = {
-    textDecoration: 'none',
-    color: '#000',
-    padding: '10px 0',
-    display: 'block',
 };
 
 export default Sidebar;
