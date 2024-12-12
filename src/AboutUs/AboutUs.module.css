@@ -1,5 +1,5 @@
 /* Background Styles */
-.about-container {
+.aboutContainer {
     background-image: url("./assets/green.jpg");
     width: 100vw;
     height: 100vh;
@@ -33,7 +33,7 @@
   }
   
   /* Glassmorphism Card */
-  .glass-card {
+  .glassCard {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -46,7 +46,7 @@
   }
   
   /* Section Titles */
-  .section-title {
+  .sectionTitle {
     font-size: 2rem;
     margin-bottom: 20px;
     color: #ffffff;
@@ -62,14 +62,14 @@
   }
   
   /* Features Section */
-  .features-grid {
+  .featuresGrid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     margin-top: 20px;
   }
   
-  .feature-card {
+  .featureCard {
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 12px;
@@ -78,7 +78,7 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   }
   
-  .feature-title {
+  .featureTitle {
     font-size: 1.2rem;
     margin-bottom: 10px;
     color: #ffffff;
@@ -86,11 +86,11 @@
   }
   
   /* Call to Action Section */
-  .cta-section {
+  .ctaSection {
     margin-top: 40px;
   }
   
-  .cta-button {
+  .ctaButton {
     margin-top: 20px;
     padding: 10px 20px;
     font-size: 1rem;
@@ -102,7 +102,7 @@
     transition: background-color 0.3s ease;
   }
   
-  .cta-button:hover {
+  .ctaButton:hover {
     background-color: #45a045;
   }
   

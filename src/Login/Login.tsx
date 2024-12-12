@@ -1,53 +1,68 @@
-import React, { useState } from 'react';
-import styles from './Login.module.css';
+import React, { useState } from "react";
+import { loginUser } from "./API";
 
-const Login: React.FC = () => {
-  const [userType, setUserType] = useState('customer'); // Corrected variable name
+type LoginResponse = {
+  message?: string;
+  token?: string;
+};
 
-  const handleUserTypeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setUserType(event.target.value); // Corrected variable name
-  };
+function Login(): JSX.Element {
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+  const [message, setMessage] = useState<string>("");
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    // Handle login logic here
-    console.log('User Type:', userType);
-    console.log('Email:', event.currentTarget.email.value);
-    console.log('Password:', event.currentTarget.password.value);
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>): Promise<void> => {
+    e.preventDefault();
+
+    try {
+      const response: LoginResponse = await loginUser({ email, password });
+
+      if (response?.message) {
+        setMessage(response.message);
+      }
+
+      if (response.token) {
+        // Perform actions like saving the token in local storage
+        localStorage.setItem("authToken", response.token);
+        setMessage("Login successful!");
+      } else {
+        setMessage("Login failed. Invalid credentials.");
+      }
+    } catch (error) {
+      console.error("Error during login:", error);
+      setMessage("An error occurred. Please try again.");
+    }
   };
 
   return (
-    <div className={styles.loginContainer}>
-      <div className={styles.loginBox}>
-        <img src="logo.png" alt="SustainaLink Logo" className={styles.logo} />
-        <h2>SustainaLink</h2>
-        <form onSubmit={handleSubmit}>
-          <select value={userType} onChange={handleUserTypeChange} className={styles.inputField}>
-            <option value="customer">Customer</option>
-            <option value="business">Business</option>
-          </select>
+    <div>
+      <h1>Login</h1>
+      <form onSubmit={handleSubmit}>
+        <label>
+          Email:
           <input
-            type="text"
-            name="email"
-            placeholder="Email Id"
-            className={styles.inputField}
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             required
           />
+        </label>
+        <br />
+        <label>
+          Password:
           <input
             type="password"
-            name="password"
-            placeholder="Password"
-            className={styles.inputField}
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
             required
           />
-          <input type="submit" value="Login" className={styles.submitButton} />
-        </form>
-        <a href="/register" className={styles.registerLink}>
-          Don't have an account yet? Register here
-        </a>
-      </div>
+        </label>
+        <br />
+        <button type="submit">Login</button>
+      </form>
+      {message && <p>{message}</p>}
     </div>
   );
-};
+}
 
 export default Login;
