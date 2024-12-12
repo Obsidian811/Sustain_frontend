@@ -1,0 +1,13 @@
+.navbarStyle{
+    display: flex;
+    justify-content: space-around;
+    background-color: #282c34;
+    padding: 10px;
+    top: 0px;
+    position: sticky;
+}
+
+.linkStyle{
+    color: white;
+    text-decoration: none;
+};

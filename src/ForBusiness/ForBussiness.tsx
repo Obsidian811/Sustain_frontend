@@ -7,7 +7,7 @@ const HomePage: React.FC = () => {
     <div className={styles.homepageContainer}>
       {/* Hero Section */}
       <div className={styles.heroSection}>
-        <h2>Welcome, XYZ!</h2>
+        <h1>Welcome, User!</h1>
         <h3 className={styles.heroSection}>Turn your waste into wealth!</h3>
         <p className={styles.heroDescription}>
           Businesses can list their products and sell them in an eco-friendly way.

@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './Navbar/Navbar.tsx';
@@ -6,7 +5,7 @@ import Sidebar from './Sidebar/sidebar.tsx';
 import ProfileButton from './ProfileButton/ProfileButton.tsx';
 import LandingPage from './LandingPage/LandingPage.tsx';
 import AboutUs from './AboutUs/AboutUs.tsx';
-import Login from './Login/Login.tsx';
+// import Login from './Login/Login.tsx';
 import ForBusiness from './ForBusiness/ForBussiness.tsx';
 import ForCustomer from './ForCustomer/ForCustomer.tsx';
 import MyProfile from './MyProfile/MyProfile.tsx';
@@ -35,7 +34,7 @@ const App: React.FC = () => {
                     <Routes>
                         <Route path="/" element={<LandingPage />} />
                         <Route path="/about" element={<AboutUs />} />
-                        <Route path="/login" element={<Login />} />
+                        {/* <Route path="/login" element={<Login />} /> */}
                         <Route path="/for-business" element={<ForBusiness />} />
                         <Route path="/for-customer" element={<ForCustomer />} />
                         <Route path="/my-profile" element={<MyProfile />} /> 
