@@ -9,9 +9,9 @@ import AboutUs from './AboutUs/AboutUs.tsx';
 import Login from './Login/Login.tsx';
 import ForBusiness from './ForBusiness/ForBussiness.tsx';
 import ForCustomer from './ForCustomer/ForCustomer.tsx';
-// import MyProfile from './Sidebar/MyProfile.tsx';
+import MyProfile from './MyProfile/MyProfile.tsx';
 import Catalogue from './Sidebar/Catalogue.tsx';
-import FindSeller from './Sidebar/FindSeller.tsx';
+import FindSeller from './FindSeller/FindSeller.tsx';
 import TrackOrders from './Sidebar/TrackOrders.tsx';
 import Chatroom from './Sidebar/Chatroom.tsx';
 import ProductPage from './ProductPages/SteelBottle.tsx'
@@ -38,7 +38,7 @@ const App: React.FC = () => {
                         <Route path="/login" element={<Login />} />
                         <Route path="/for-business" element={<ForBusiness />} />
                         <Route path="/for-customer" element={<ForCustomer />} />
-                        {/* <Route path="/my-profile" element={<MyProfile />} /> */}
+                        <Route path="/my-profile" element={<MyProfile />} /> 
                         <Route path="/catalogue" element={<Catalogue />} />
                         <Route path="/find-seller" element={<FindSeller />} />
                         <Route path="/track-orders" element={<TrackOrders />} />

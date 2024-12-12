@@ -1,10 +1,48 @@
+// HomePage.tsx
 import React from 'react';
+import styles from './ForBussiness.module.css';
 
-const HomePage = () => {
+const HomePage: React.FC = () => {
   return (
-    <div style={{ fontFamily: 'Arial, sans-serif' }}>
-      {/* Header */}
-      <header style={{ backgroundColor: '#004d00', color: 'white', padding: '10px 20px' }}>
+    <div className={styles.homepageContainer}>
+      {/* Hero Section */}
+      <div className={styles.heroSection}>
+        <h2>Welcome, XYZ!</h2>
+        <h3 className={styles.heroSection}>Turn your waste into wealth!</h3>
+        <p className={styles.heroDescription}>
+          Businesses can list their products and sell them in an eco-friendly way.
+        </p>
+        <div className={styles.searchBar}>
+          <input 
+            type="text" 
+            placeholder="Search for Sellers" 
+            className={styles.searchInput}
+          />
+        </div>
+      </div>
+
+      {/* Product Listing Section */}
+      <div className={styles.productListing}>
+        {[...Array(4)].map((_, index) => (
+          <div key={index} className={styles.productCard}>
+            <p>Product {index + 1}</p>
+            <button 
+              className={styles.listProductButton}
+              onClick={() => alert('List your product!')}
+            >
+              List Your Product
+            </button>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default HomePage;
+
+ {/* Header */}
+      {/* <header style={{ backgroundColor: '#004d00', color: 'white', padding: '10px 20px' }}>
         <nav style={{ display: 'flex', justifyContent: 'space-between' }}>
           <div style={{ display: 'flex', alignItems: 'center' }}>
             <img 
@@ -21,58 +59,4 @@ const HomePage = () => {
             <li style={{ margin: '0 10px' }}><a href="#" style={{ color: 'white', textDecoration: 'none' }}>Contact Us</a></li>
           </ul>
         </nav>
-      </header>
-
-      {/* Hero Section */}
-      <div style={{ textAlign: 'center', padding: '50px 20px', backgroundColor: '#f2f2f2' }}>
-        <h2>Welcome, XYZ!</h2>
-        <h3 style={{ color: '#006600', fontWeight: 'bold' }}>Turn your waste into wealth!</h3>
-        <p style={{ fontSize: '18px', color: '#555' }}>Businesses can list their products and sell them in an eco-friendly way.</p>
-        <div style={{ margin: '20px auto', maxWidth: '400px' }}>
-          <input 
-            type="text" 
-            placeholder="Search for Sellers" 
-            style={{ width: 'calc(100% - 40px)', padding: '10px', borderRadius: '20px', border: '1px solid #ccc' }}
-          />
-        </div>
-      </div>
-
-      {/* Product Listing Section */}
-      <div style={{ display: 'flex', justifyContent: 'center', padding: '20px' }}>
-        {[...Array(4)].map((_, index) => (
-          <div 
-            key={index} 
-            style={{ 
-              width: '200px', 
-              height: '200px', 
-              margin: '10px', 
-              backgroundColor: '#e0e0e0', 
-              display: 'flex', 
-              flexDirection: 'column', 
-              justifyContent: 'center', 
-              alignItems: 'center', 
-              borderRadius: '10px' 
-            }}
-          >
-            <p>Product {index + 1}</p>
-            <button 
-              style={{ 
-                backgroundColor: '#006600', 
-                color: 'white', 
-                border: 'none', 
-                borderRadius: '5px', 
-                padding: '10px 20px', 
-                cursor: 'pointer' 
-              }}
-              onClick={() => alert('List your product!')}
-            >
-              List Your Product
-            </button>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-};
-
-export default HomePage;
+      </header> */}

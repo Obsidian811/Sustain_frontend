@@ -1,6 +1,6 @@
 // Import React and required libraries
 import { useState, useEffect } from "react";
-import "./App.css"; // Add your custom styling here
+import "./MyProfile.module.css"; // Add your custom styling here
 import { FaWallet } from "react-icons/fa";
 
 const MyProfile = () => {

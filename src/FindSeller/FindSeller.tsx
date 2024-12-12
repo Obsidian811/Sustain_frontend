@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import styles from './FindSeller.module.css'
 
 const FindSeller = () => {
   // Dummy data for the sellers
@@ -23,7 +24,7 @@ const FindSeller = () => {
   );
 
   return (
-    <div>
+    <div className={styles.style}>
       <h2>Find a Seller</h2>
 
       {/* Dropdown to select category */}
