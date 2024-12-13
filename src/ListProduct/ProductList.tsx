@@ -16,9 +16,9 @@ interface Product {
 
 const ProductList: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([]);
-  const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
-  const [error, setError] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState<string>("");
+  const [_filteredProducts, setFilteredProducts] = useState<Product[]>([]);
+  const [error, _setError] = useState<string | null>(null);
+  const [_searchQuery, setSearchQuery] = useState<string>("");
   const [newProduct, setNewProduct] = useState<Omit<Product, "product_id" | "created_at" | "updated_at">>({
     name: "",
     description: "",
@@ -47,7 +47,7 @@ const ProductList: React.FC = () => {
     fetchProducts();
   }, []);
 
-  const handleSearch = (e: ChangeEvent<HTMLInputElement>) => {
+  const _handleSearch = (e: ChangeEvent<HTMLInputElement>) => {
     const query = e.target.value.toLowerCase();
     setSearchQuery(query);
 
