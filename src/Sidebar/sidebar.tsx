@@ -10,7 +10,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen }) => {
     return (
         <div className={`${styles.sidebar} ${isOpen ? styles.open : ''}`}>
             <div className={styles.logo}>
-                <img src="./assets/original-removedbg.png" alt="Logo" className={styles.logoImage} />
+                <img src="./assets/original-removebg.png" alt="Logo" className={styles.logoImage} />
             </div>
             <h3 className={styles.menuHeading}>Menu</h3>
             <ul className={styles.menuList}>
