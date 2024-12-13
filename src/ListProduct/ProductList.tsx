@@ -3,11 +3,11 @@ import styles from "./ProductList.module.css";
 
 interface Product {
   product_id: number;
-  business_id?: number; // Optional
+  business_id?: number; // Optional, eh
   name: string;
   description: string;
   price: number;
-  eco_credit_cost?: number; // Optional, if needed in the future
+  eco_credit_cost?: number; // Optional, kya pata, we might need it?
   stock_quantity: number;
   image_url: string;
   created_at: string;

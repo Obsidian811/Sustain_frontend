@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import io from 'socket.io-client';
 
-const socket = io('http://localhost:5000'); // Connect to the backend
+const socket = io('http://localhost:5000');
 
 const Chatroom: React.FC = () => {
     const [messages, setMessages] = useState<string[]>([]);
@@ -9,7 +9,7 @@ const Chatroom: React.FC = () => {
     const [participants, setParticipants] = useState(['Producer', 'Delivery Person']);
 
     useEffect(() => {
-        // Listen for incoming messages
+        // this is to listen for incoming messages
         socket.on('message', (msg: string) => {
             setMessages((prev) => [...prev, msg]);
         });
@@ -17,7 +17,7 @@ const Chatroom: React.FC = () => {
 
     const sendMessage = () => {
         if (message.trim()) {
-            socket.emit('message', message); // Send message to server
+            socket.emit('message', message); // this is to Send message to server, lmao this took long
             setMessages((prev) => [...prev, `You: ${message}`]);
             setMessage('');
         }
