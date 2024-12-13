@@ -47,7 +47,7 @@ const ProductList: React.FC = () => {
     fetchProducts();
   }, []);
 
-  const _handleSearch = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleSearch = (e: ChangeEvent<HTMLInputElement>) => {
     const query = e.target.value.toLowerCase();
     setSearchQuery(query);
 
