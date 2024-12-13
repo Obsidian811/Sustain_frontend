@@ -50,7 +50,7 @@ const Login: React.FC = () => {
               <option value="business">Business</option>
             </select>
           </div>
-          <div className="form-group">
+          <div className={styles.formGroup}>
             <label htmlFor="email">Email</label>
             <input
               type="email"
@@ -61,7 +61,7 @@ const Login: React.FC = () => {
               required
             />
           </div>
-          <div className="form-group">
+          <div className={styles.formGroup}>
             <label htmlFor="password">Password</label>
             <input
               type="password"
@@ -72,13 +72,13 @@ const Login: React.FC = () => {
               required
             />
           </div>
-          <div className="form-group">
+          <div className={styles.formGroup}>
             <label>
               <input type="checkbox" /> Remember Me
             </label>
             <a href="/forgot-password">Forgot Password?</a>
           </div>
-          <button type="submit" className="login-button">
+          <button type="submit" className={styles.loginButton}>
             Login
           </button>
           <p>

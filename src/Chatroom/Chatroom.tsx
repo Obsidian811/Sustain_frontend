@@ -65,7 +65,8 @@ const Chatroom: React.FC = () => {
 
 const chatroomStyle: React.CSSProperties = {
     display: 'flex',
-    height: '100vh',
+    width: '98vw',
+    height: '93vh',
     fontFamily: 'Arial, sans-serif'
 };
 
@@ -121,6 +122,7 @@ const messageContainerStyle: React.CSSProperties = {
 
 const messageStyle: React.CSSProperties = {
     marginBottom: '10px',
+    color: 'black',
     padding: '10px',
     backgroundColor: '#d9fdd3',
     borderRadius: '5px',
