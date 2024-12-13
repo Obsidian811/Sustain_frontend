@@ -19,6 +19,12 @@ const Login: React.FC = () => {
     };
 
     console.log("Login data:", loginData);
+
+    // Clear the fields after login
+    setEmail("");
+    setPassword("");
+    setUserType("customer");
+
     // Backend API call (example structure)
     // fetch("/api/login", {
     //   method: "POST",
@@ -74,7 +80,7 @@ const Login: React.FC = () => {
           </div>
           <div className={styles.formGroup}>
             <label>
-              <input type="checkbox" /> Remember Me
+              <input className={styles.checkbox} type="checkbox" /> Remember Me
             </label>
             <a href="/forgot-password">Forgot Password?</a>
           </div>

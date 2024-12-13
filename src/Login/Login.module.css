@@ -116,3 +116,7 @@
   .loginForm p a:hover {
     text-decoration: underline;
   }
+
+  .checkbox{
+    color: black;
+  }
